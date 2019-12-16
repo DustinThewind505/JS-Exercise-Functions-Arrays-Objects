@@ -25,8 +25,8 @@ addNumbers(2, 4);
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
-/**
- * ### Challenge `makePersonObject`
+/**=================================================================================================
+ * ### Challenge `makePersonObject`=================================================================
  * 
  * @instructions
  * This function should take an id, a name and an email as arguments,
@@ -49,9 +49,8 @@ function makePersonObject(id, name, email) {
     return info;
 }
 
-/**
- * ### Challenge `getName`
- * 
+/**================================================================================================
+ * ### Challenge `getName`=========================================================================
  * @instructions
  * This function takes as its only argument
  * an object containing a `name` property,
@@ -62,12 +61,12 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  /* code here */
+function getName(obj) {
+  return "Hello, my name is " + obj.name;
 }
 
-/**
- * ### Challenge `makeSmartPerson`
+/**===============================================================================================
+ * ### Challenge `makeSmartPerson`================================================================
  * 
  * @instructions
  * This function takes a single `name` argument and returns an object.
@@ -79,10 +78,19 @@ function getName(name) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const smartPerson = {}
+  smartPerson.name = name;
+  smartPerson.sum = function (num1, num2) {
+    return num1 + num2;
+  }
+  smartPerson.speak = function (){
+    return name + ' doesnt like you either';
+  }
+  return smartPerson
 }
 
+console.log(makeSmartPerson(Nelson));
 
 
 
