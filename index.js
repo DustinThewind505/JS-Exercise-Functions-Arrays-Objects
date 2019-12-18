@@ -97,7 +97,6 @@ function makeSmartPerson(name) {
 
 /*
 // ⭐️ Example Test Data ⭐️
-
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
@@ -166,8 +165,10 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  /* try again */
+  const car = inventory[inventory.length - 1]
+  return `This is a ${car.car_make} ${car.car_model}`
 }
+
 
 /**
  * ### Challenge `getCarInfoById`
@@ -181,8 +182,12 @@ function getLastCarInfo(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  for(let i in inventory) {
+    if(inventory[i].id === id){
+      return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`
+    }
+  }
 }
 
 /**
@@ -193,8 +198,9 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(inventory) {
+  return inventory.sort((a,b) => {
+  })
 }
 
 /**
@@ -247,9 +253,9 @@ function getGermanCars(/* code here */) {
 /**==================================================================================================
  * ### Challenge refactor to arrow functions=========================================================
 */
-const sum = (a, b) => a + b; // code here!
-const addFive = (num) => num + 5; // code here!
-const argTimesTwo = (num) => num * 2; // code here!
+var sum = (a, b) => a + b; // code here!
+var addFive = (num) => num + 5; // code here!
+var argTimesTwo = (num) => num * 2; // code here!
 
 /**
  * ### Challenge `carMaker`
