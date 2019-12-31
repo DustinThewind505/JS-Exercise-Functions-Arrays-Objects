@@ -19,8 +19,7 @@ Find the file `index.js` and complete the tasks until all of your tests pass. Do
 
 ## Get Started
 
-<summary><strong>Using VSCode and a Command Line:</strong></summary>
-
+<summary><strong>Using VSCode and a Command Line:</strong></summary>npm install
 1. Fork repo and add TL as collaborator on Github.
 1. Clone _your_ fork (not Lambda's repo by mistake!).
 1. `cd` into your newly cloned repository.
